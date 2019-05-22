@@ -1,0 +1,28 @@
+<html>
+<head>
+	<title> RESULT form TU </title>
+</head>
+<body>
+	<h1> Search Result </h1>
+	<table border = "1">			
+			<tr>
+				<td> {{ result1 }} </td>
+			</tr>
+		</table>
+	
+	<table border = "1">
+		{% for key,value in result.items(): %}
+		<tr>
+			<td> {{ key }} </td>
+			{% for i in  value: %}
+			<tr>
+				<td> {{ i }} </td>
+			</tr>
+			{% endfor %}	
+		</tr>		
+		{% endfor %}
+	</table>
+
+</body>
+</html>
+	

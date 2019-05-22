@@ -1,0 +1,24 @@
+<html>
+<head>
+	<title> RESULT form TU </title>
+	
+</head>
+<body>
+        <table border = "1">
+                {% for key,value in urlfilter.items(): %}
+                <tr>
+                    <td>Your Word : {{ key }} </td>
+                    <!-- <h3><p style="font-size:medium;">Result : {{ list_word }}</p></h3> -->
+                    {% for i in  value: %}
+                    <tr>
+                        <td><a href = {{i}}>{{ i }}</a></td>
+                    </tr>
+                    {% endfor %}	
+                </tr>		
+                {% endfor %}
+            </table>
+        
+
+</body>
+</html>
+        

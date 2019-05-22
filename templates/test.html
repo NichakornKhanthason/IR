@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<title> RESULT form TU </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.w3-btn 
+{
+  width:70px;
+  height:30px;
+  font-size: 12px;
+
+}
+</style>
+<body>
+
+<div class="w3-container">
+  
+    <center><font color="black"> <h1>Word : <font color="red"> {{word}} </font></h1> </font>
+    <img src="https://www.img.in.th/images/23d38d888366ab72551e3ef847e3dc6a.png" alt="TJzg3l.jpg" border="0"/></center>
+    
+    <br>
+
+    <form action ="{{ url_for('wild') }}" method="POST">
+    <center>
+        <select name="wild">
+        {% for i in listword:%}
+        <option value= {{ i }}>{{i}} </option>
+        {% endfor %}
+        <input class="w3-btn w3-border w3-round w3-hover-yellow" type="submit" value="Submit" text-align="center" onClick="this.form.action='http://seashore.informatics.buu.ac.th/~59160943/PROJECT-FLASK/MyApp/templates/test'; submit()" formmethod="post">
+        </select>
+    </center></form>
+
+
+    <br>
+
+  <table class="w3-table-all" border = "1">
+    <thead>
+      <tr class="w3-blue">
+        <th><p align="center">Link</p></th>
+      </tr>
+    </thead>
+
+    {% for i in urlfil: %}
+    <tr>
+        <td>
+                <a href = {{i}}>{{ i }}</a>
+        </td>
+        {% endfor %}
+    </tr>
+    
+  </table>
+</div>
+
+</body>
+</html> 
