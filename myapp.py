@@ -120,14 +120,14 @@ def result	():
       dict_fil={}
       list_fil = []
       list_filtered = splitword(word)
-      print(list_filtered)ฟ
+      #print(list_filtered)
       for i in list_filtered:
         filtered = fnmatch.filter(word_list,i)
         print(filtered)
         if len(filtered) >0:
           for j in filtered:          
             list_fil.append(j)    
-      print(list_fil)
+      #print(list_fil)
       return render_template("test.html",listword = list_fil)
 
 

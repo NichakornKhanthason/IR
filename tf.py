@@ -6,9 +6,9 @@ def dfFunctions(word,dicted,N,word_tf ):
     df = {}
     for i in word:
         df[i] = {len(dicted[i])}
-    print(df[word[0]])
+    #print(df[word[0]])
     idf = idfFunctions(word,df,N)
-    print(idf)
+    #print(idf)
     tfIdf = tfIdfFunctions(dicted,word,idf,word_tf)
     dict_sumtf={}
     sum =0.0
