@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+import sys
 from flask import Flask, render_template, request
 import requests
 from lxml import html
